@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beans:beans xmlns:beans="http://www.springframework.org/schema/beans" xmlns="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  http://www.springframework.org/schema/security  http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+
+	<http auto-config="true">
+		<intercept-url access="ROLE_ENGR,ROLE_ADMIN,ROLE_CORD" pattern="/index*"/>
+		<!-- <intercept-url pattern="/admin*" access="ROLE_ADMIN" />
+		<intercept-url pattern="/branch*" access="ROLE_BRANCH" />-->
+		
+		<form-login authentication-failure-url="/failLogin.do" default-target-url="/index.do" login-page="/login.do"/>
+		<logout logout-success-url="/logoff.do"/>
+		
+		
+		
+		 	<!-- <session-management invalid-session-url="/logoff.do">
+    		<concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+			</session-management>-->
+		
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service authorities-by-username-query="select l.username, r.role from logins l, roles r where l.login_id = r.login_id and l.username =?  " data-source-ref="dataSource" users-by-username-query="select username,password, enabled from logins where username=?"/>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

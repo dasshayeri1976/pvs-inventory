@@ -1,0 +1,386 @@
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix='sec' uri='http://www.springframework.org/security/tags' %> 
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
+<%@page import="com.connection.account.ConnectionDAO"%>
+<%@ page import="java.sql.*"%>
+<%@ page session="true"%>
+<%@page isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Header</title>
+
+<link rel="stylesheet" href="./css/style.css" type="text/css" />
+<script type="text/javascript" src="./js/packed.js"></script>
+<script type="text/javascript" src="./js/tinydropdown.js"></script>
+<sj:head />
+<%
+	String a1 = (String) session.getAttribute("user");
+	
+	try
+	{
+		if(a1.compareTo("null")==0)
+		response.sendRedirect("login.jsp");
+	}
+	catch(Exception e)
+	{
+		response.sendRedirect("login.jsp");
+	}
+	
+	String a3 = "", a4="",a5="",a6="";
+	String sql = "select * from logins where USERNAME ='" + a1 + "'";
+
+	Connection conn = ConnectionDAO.getConnectionObject();
+	Statement stm = ConnectionDAO.createStatement(conn);
+	try {
+
+		ResultSet rs = stm.executeQuery(sql);
+		while (rs.next()) {
+
+			a3 = rs.getString(6);
+			
+		}
+		
+	sql = "select * from user where USERNAME ='" + a1 + "'";
+	rs = stm.executeQuery(sql);
+		while (rs.next()) {
+
+			a6 = rs.getString(2);
+			
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+
+	ConnectionDAO.closeConnection(conn);
+	//System.out.printf("UserName: " + a3);
+%>
+<%
+String cmp=(String) session.getAttribute("cmp");
+String fin=(String) session.getAttribute("fin");
+Connection conn1 = ConnectionDAO.getConnectionObject();
+Statement stm1 = ConnectionDAO.createStatement(conn1);
+String add1="",add2="";
+try
+{
+	ResultSet rs;
+	sql="select * from company_master where company_name='"+cmp+"'";
+	//System.out.println(sql);
+	rs=stm1.executeQuery(sql);
+	while(rs.next())
+	{
+		add1=rs.getString(4);
+		add2=rs.getString(5);
+	}
+	session.setAttribute("ad1",add1);
+	session.setAttribute("ad2",add2);
+	ConnectionDAO.closeConnection(conn1);
+}
+catch(Exception fff)
+{
+	System.out.println("error on address getting "+fff);
+}
+%>
+</head>
+<body >
+	<table width="100%">
+		<tr>
+			<td>
+
+				<div align="center" >
+					<p class="style3">
+					 <%=cmp %> </p>
+					 
+					 <p class="style3_0">
+					<%=add1 %><br>
+					<%=add2 %></p>
+					
+					 <p style="color:darkgreen">
+					Financial Year: <u><%=fin %></u></p>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<table width="100%" >
+		<tr>
+			<td valign="bottom">
+				<div align="right" class="style6">
+					Welcome&nbsp; <span style="color: red"><%=a3 %></span><a
+						href="logout"
+						style="text-decoration: none"> <span style="color: green;"><strong>Logout</strong></span></a>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="nav1">
+		<ul id="menu" class="menu">
+
+				<sec:authorize ifAnyGranted='ROLE_ADMIN'>
+
+				
+					<li><a href="#">Master Management</a>
+					<ul>
+						<li><a>Account Management</a>
+						<ul>
+							<li><a href="acgrouplist">Group Master</a></li>
+							<li><a href="grpnamelist">SubGroup Master</a></li>
+							<li><a href="ledgerlist">Ledger Master</a></li>
+							<li><a href="narrationlist">Narration Master</a></li>
+						</ul>
+						</li>
+						<li><a>Inventory Management</a>
+						<ul>
+							
+							<li><a href="categorylist">Party Category Master</a></li>							
+							<li><a href="salesmanlist">Sales Man Master</a></li>
+							<li><a href="compdetaillist">Company Master</a></li>
+							<li><a href="placemasterlist">Area Master</a></li>
+							
+							<!-- <li><a href="partymasterlist">Party Master</a></li> -->
+						<!-- 	<li><a href="materialgrouplist">Material Group Master</a></li> -->
+							
+							<li><a href="claimlist">Claim Master</a></li>
+							<li><a href="partydetaillist">Party Master</a></li>
+							
+							
+							<li><a href="materialglist">Material Group Master</a></li>
+							<li><a href="materialpaddarlist">Material Master Creation</a></li>
+						</ul>
+						</li>
+					</ul>
+				</li>
+				
+				<li><a href="#">Transaction Management</a>
+				<ul>
+					<li><a>Account Transaction</a>
+						<ul>
+							<li><a href="receiptlist">Receipt</a></li>
+							<li><a href="paymentlist">Payment</a></li>
+							<li><a href="contralist">Contra</a></li>
+							<li><a href="journallist">Journal</a></li>
+							<li><a href="debitnotelist">Debit Note</a></li>
+							<li><a href="creditnotelist">Credit Note</a></li>
+							<li><a href="saleslist">Credit Sales</a></li>
+							<li><a href="purchaselist">Credit Purchase</a></li>
+							<li><a href="cashsaleslist">Cash Sales</a></li>
+							<li><a href="cashpurchaselist">Cash Purchase</a></li>
+							<li><a href="bankreconsiliation">Bank Reconciliation</a></li>
+						</ul>
+					</li>
+					<li><a>Inventory Transaction</a>
+						<ul>
+							<li><a>Purchase Entry</a>
+								<ul>
+									<li><a href="purchaselist1">Purchase Entry</a></li>
+									<li><a href="purchaseretlist">Purchase Cash Bill</a></li>
+								</ul>
+							</li>	
+							<li><a>Sales Memo Entry</a>
+								<ul>
+									<li><a href="outsidesaleslist">Outside Sales Memo Entry</a></li>
+									<li><a href="countersaleslist">Counter Sales Memo Entry</a></li>
+									<li><a href="mrpsaleslist">M.R.P Wise Sales Entry</a></li>
+									<li><a href="distsaleslist">Distributor Wise Sales Entry</a></li>
+								</ul>
+							</li>
+							<li><a>Delivery Challan Entry</a>
+								<ul>
+									<li><a href="outsidechallanlist">Outside Challan Entry</a></li>
+									<li><a href="counterchallanlist">Counter Challan Entry</a></li>									
+								</ul>
+							</li>
+							<li><a>Sales/Challan Ammendment Entry</a>
+								<ul>
+									<li><a href="outsidechallanlist">Sales Memo Ammendment Entry</a></li>
+									<li><a href="counterchallanlist">Challan Ammendment Entry</a></li>									
+								</ul>
+							</li>
+							<li><a>Sales Summary</a>
+								<ul>
+									<li><a href="mkrtsalesummarylist">Market Wise Sales Summary</a></li>
+									<li><a href="amktsalesummarylist">For All Market Sales Summary</a></li>
+								</ul>
+							</li>
+							<li><a>VAN Challan</a>
+								<ul>
+									<li><a href="">Sales Memo Without Value</a></li>
+									<li><a href="">Sales Memo With Value</a></li>
+									<li><a href="">Challan Without Value</a></li>
+									<li><a href="">Challan With Value</a></li>
+									
+								</ul>
+							</li>
+							<li><a href="">Others Entry Modules</a></li>
+								<ul>
+									<li><a href="collectionlist">Collection Entry</a></li>
+									<li><a href="transferlist">Transfer Entry</a></li>
+									<li><a href="refundlist">Refund Entry</a></li>
+									<li><a href="creditnotelist">Credit Note Entry</a></li>
+									<li><a href="debitnotelist">Debit Note Entry</a></li>
+																		
+								</ul>								
+							</li>
+							<li><a href="salesmemeoentry">Sales Memo Entry</a>	</li>
+						
+							<li><a href="msalesmemeoentry"> MRP. Sales Memo Entry</a></li>
+							
+							<li><a href="csalesmemeoentry"> Counter Sales Memo Entry</a></li>
+							<li><a href="dsalesmemeoentry"> Distributor Sales Memo Entry</a></li>
+							<li><a href="salesreturn">Sales Return Entry</a></li>
+							
+							
+						</ul>
+					</li>
+				</ul>
+				</li>	
+				
+				<li><a href="#">Report Management</a>
+				<ul>
+						<li><a>Account Report</a>
+						<ul>
+							<li><a href="cashlist">Daily Cash Balance</a></li>
+							<li><a href="partyledgerlist">Monthly Breakup of Party Ledger</a></li>
+							<li><a>Detail Trial Balance</a>
+								<ul>
+									<li><a href="grouptriallist">Group Trial Balance</a></li>
+									<li><a href="subgrouptriallist">Sub-Group Trial Balance</a></li>
+									<li><a href="triallist">Ledger Trial Balance</a></li>
+								</ul>
+							</li>
+							<li><a href="openingtriallist">Opening Trial Display</a></li>
+							<li><a href="cashbooklist1">Cash Book Display</a></li>
+							<li><a href="bankbooklist">Bank Book Display</a></li>
+							<li><a href="cashtriallist">Cash Trial Display</a></li>
+							<li><a href="statementlist">Statement Of Account</a></li>
+							<li><a href="maintainlist">Maintain Voucher Transaction</a></li>
+							<li><a href="billoutstandinglist">Bill Outstanding</a></li>
+							<li><a href="bankreconciliationreport">Bank Reconciliation Report</a></li>
+							<li><a href="daybooklist">Day Book</a></li>
+							<li><a href="journalregisterlist">Journal Register</a></li>
+						</ul>
+						</li>
+						<li><a>Inventory Report</a>
+						<ul>
+							<li><a>Material Ledger</a>
+								<ul>
+									<li><a href="">Material Wise</a></li>
+									<li><a href="">Batch Wise</a></li>
+								</ul>
+							</li>
+							<li><a>Stock Statement</a>
+								<ul>
+									<li><a href="">Sales & Stock Statement</a></li>
+									<li><a>Consolidation Statement</a>
+										<ul>
+											<li><a href="">Consolidation Statement</a></li>
+											<li><a href="">Consolidation Statement & Bonus</a></li>
+											<li><a href="">Month/Sales & Coll</a></li>
+										</ul>
+									</li>
+									<li><a href="">Batch Wise Stock</a></li>
+									<li><a href="">Bonus Statement</a></li>
+									<li><a href="">SPL. Free Report</a></li>
+								</ul>
+							</li>
+							<li><a>Stock Status</a>
+								<ul>
+									<li><a href="">Purchase Rate Wise</a></li>
+									<li><a href="">Sales Rate Wise</a></li>
+								</ul>
+							</li>
+							<li><a>Sales Report</a>
+								<ul>
+									<li><a href="">Representative Oftake</a></li>
+									<li><a href="">Lifting Summary</a></li>
+									<li><a href="">Party Lifting</a></li>
+									<li><a href="">A.S.M Lifting</a></li>
+								</ul>
+							</li>
+							<li><a>Registers</a>
+								<ul>
+									<li><a>Sales Return Register</a>
+										<ul>
+											<li><a href="">Company Wise</a></li>
+											<li><a href="">For All Company</a></li>
+										</ul>
+									</li>
+									<li><a>Purchase Register</a>
+										<ul>
+											<li><a href="">Purchase Details</a></li>
+											<li><a href="">Purchase Report</a></li>
+										</ul>
+									</li>
+									<li><a>Outward Register</a>
+										<ul>
+											<li><a href="">Company Wise</a></li>
+											<li><a href="">Company & Party Details</a></li>
+											<li><a href="">Company & Party Report</a></li>
+											<li><a href="">Company Wise Detail</a></li>
+											<li><a href="">Company Wise Report</a></li>
+										</ul>
+									</li>
+									<li><a>Inward Register</a>
+										<ul>
+											<li><a href="">Inward Details</a></li>
+											<li><a href="">Inward Report</a></li>
+										</ul>
+									</li>
+									<li><a>Sales Register</a>
+										<ul>
+											<li><a href="">Company Wise</a></li>
+											<li><a href="">All Company</a></li>
+											<li><a href="">Party Wise</a></li>
+										</ul>
+									</li>
+									<li><a href="">Other Sales Registration</a></li>
+									<li><a>GRB Register</a>
+										<ul>
+											<li><a href="">Company & Party Detail</a></li>
+											<li><a href="">Company Wise Details</a></li>
+											<li><a href="">Company Wise Report</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						</li>
+					</ul>
+				
+				</li>
+				
+				<li><a href="#">System Management</a>
+				<ul>
+					<li><a href="calculator">Calculator</a></li>
+					<li><a href="userlist">User Profile </a></li>
+									
+				</ul></li>
+				
+				
+				
+				<li><a href="#">Dash Board </a>
+				<ul>
+					
+					<li><a href="dashboard">Dashboard</a></li>
+					
+				</ul></li>
+				
+				
+				</sec:authorize>
+				
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		var dropdown = new TINY.dropdown.init("dropdown", {
+			id : 'menu',
+			active : 'menuhover'
+		});
+	</script>
+
+</body>
+</html>

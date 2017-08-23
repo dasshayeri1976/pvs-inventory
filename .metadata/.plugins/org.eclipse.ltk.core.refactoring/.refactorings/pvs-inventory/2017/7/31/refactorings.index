@@ -1,0 +1,9 @@
+1501495978167	Delete elements
+1501497476655	Delete element
+1501497922056	Rename package 'bean.action.account'
+1501498009892	Rename package 'bean.action.inventory'
+1501498034136	Rename package 'connection.action.account'
+1501498064386	Rename package 'helper.action.account'
+1501498085301	Rename package 'helper.action.inventory'
+1501498107383	Rename package 'logout.action.account'
+1501498125837	Rename package 'sso.action.account'

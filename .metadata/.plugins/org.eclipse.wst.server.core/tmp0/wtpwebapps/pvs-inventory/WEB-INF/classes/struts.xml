@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.action.excludePattern" value="/notify,/ImageServlet"/>
+
+<package name="default" extends="tiles-default" namespace="/">
+
+<action name="login"
+  class="com.action.account.Login" method="login">
+  <result name="success" type="tiles">login-success</result>
+  <result name="error" >login.jsp</result>  
+</action>
+
+<action name="loader1"
+  class="com.action.account.Login" method="loader1">
+  <result name="success" type="tiles">loader1</result>
+  <result name="error" >loader1</result>  
+</action>
+
+<action name="load"
+  class="com.action.account.Login" method="load">
+  <result name="success" type="tiles">dashboard</result>
+  <result name="error" >loader1</result>  
+</action>
+
+<action name="dashboard"
+  class="com.action.account.Login" method="dashboard">
+  <result name="success" type="tiles">dashboard</result>  
+</action>
+
+<action name="calculator"
+  class="com.action.account.Login" method="calculator">
+  <result name="success" type="tiles">calculator</result>
+</action>
+
+<action name="logout" class="com.action.account.Login" method="logout">  
+<result name="success" >login.jsp</result>  
+</action> 
+
+
+<action name="userlist"
+  class="com.action.account.Login" method="userlist">
+  <result name="success" type="tiles">userlist</result>
+</action>
+
+<action name="usercreation"
+  class="com.action.account.Login" method="usercreation">
+  <result name="success" type="tiles">userlist</result>
+ </action>
+ 
+ <action name="userupdate"
+  class="com.action.account.Login" method="userupdate">
+  <result name="success" type="tiles">userlist</result>
+ </action>
+ 
+ <action name="userdelete"
+  class="com.action.account.Login" method="userdelete">
+  <result name="success" type="tiles">userlist</result>
+ </action>
+ 
+ <action name="acgrouplist"
+  class="com.action.account.Login" method="acgrouplist">
+  <result name="success" type="tiles">acgrouplist</result>
+</action>
+<action name="acgrouplist1"
+  class="com.action.account.Login" method="acgrouplist1">
+  <result name="success" type="tiles">acgrouplist1</result>
+</action>
+
+<action name="acgroupcreation"
+  class="com.action.account.Login" method="acgroupcreation">
+  <result name="success" type="tiles">acgrouplist</result>
+</action>
+
+<action name="acgroupupdate"
+  class="com.action.account.Login" method="acgroupupdate">
+  <result name="success" type="tiles">acgrouplist</result>
+ </action>
+ 
+ <action name="acgroupdelete"
+  class="com.action.account.Login" method="acgroupdelete">
+  <result name="success" type="tiles">acgrouplist</result>
+ </action>
+ 
+ 
+ <action name="ledgerlist"
+  class="com.action.account.Login" method="ledgerlist">
+  <result name="success" type="tiles">ledgerlist</result>
+</action>
+<action name="ledgersublist"
+  class="com.action.account.Login" method="ledgersublist">
+  <result name="success" type="tiles">ledgersublist</result>
+</action>
+ <action name="ledgercreation"
+  class="com.action.account.Login" method="ledgercreation">
+  <result name="success" type="tiles">ledgerlist</result>
+</action>
+<action name="ledgerupdate"
+  class="com.action.account.Login" method="ledgerupdate">
+  <result name="success" type="tiles">ledgerlist</result>
+</action>
+<action name="ledgerdelete"
+  class="com.action.account.Login" method="ledgerdelete">
+  <result name="success" type="tiles">ledgerlist</result>
+</action>
+
+
+
+<action name="narrationlist"
+  class="com.action.account.Login" method="narrationlist">
+  <result name="success" type="tiles">narrationlist</result>
+</action>
+ 
+ <action name="narrationcreation"
+  class="com.action.account.Login" method="narrationcreation">
+  <result name="success" type="tiles">narrationlist</result>
+</action>
+
+<action name="narrationupdate"
+  class="com.action.account.Login" method="narrationupdate">
+  <result name="success" type="tiles">narrationlist</result>
+</action>
+
+<action name="narrationdelete"
+  class="com.action.account.Login" method="narrationdelete">
+  <result name="success" type="tiles">narrationlist</result>
+</action>
+
+
+
+<action name="paymentlist"
+  class="com.action.account.Login" method="paymentlist">
+  <result name="success" type="tiles">paymentlist</result>
+</action>
+ 
+ <action name="paymentpartlist"
+  class="com.action.account.Login" method="paymentpartlist">
+  <result name="success" type="tiles">paymentpartlist</result>
+</action>
+
+<action name="paymentpartlist1"
+  class="com.action.account.Login" method="paymentpartlist1">
+  <result name="success" type="tiles">paymentpartlist1</result>
+</action>
+
+
+<action name="paymentpartlist2"
+  class="com.action.account.Login" method="paymentpartlist2">
+  <result name="success" type="tiles">paymentpartlist2</result>
+</action>
+
+
+<action name="paymentpartlist3"
+  class="com.action.account.Login" method="paymentpartlist3">
+  <result name="success" type="tiles">paymentpartlist3</result>
+</action>
+
+<action name="paymentpartlist4"
+  class="com.action.account.Login" method="paymentpartlist4">
+  <result name="success" type="tiles">paymentpartlist4</result>
+</action>
+
+ <action name="paymentcreation"
+  class="com.action.account.Login" method="paymentcreation">
+  <result name="success" type="tiles">paymentlist</result>
+</action>
+
+<action name="paymentupdate"
+  class="com.action.account.Login" method="paymentupdate">
+  <result name="success" type="tiles">paymentlist</result>
+</action>
+
+<action name="paymentdelete"
+  class="com.action.account.Login" method="paymentdelete">
+  <result name="success" type="tiles">paymentlist</result>
+</action>
+
+
+
+<action name="contralist"
+  class="com.action.account.Login" method="contralist">
+  <result name="success" type="tiles">contralist</result>
+</action>
+ 
+ 
+ <action name="journalcreation"
+  class="com.action.account.Login" method="journalcreation">
+  <result name="success" type="tiles">journallist</result>
+</action>
+<action name="journalupdate"
+  class="com.action.account.Login" method="journalupdate">
+  <result name="success" type="tiles">journallist</result>
+</action>
+<action name="journaldelete"
+  class="com.action.account.Login" method="journaldelete">
+  <result name="success" type="tiles">journallist</result>
+</action>
+
+ <!-- top on a/c list -->
+ <action name="paymentpartlist1" 						
+  class="com.action.account.Login" method="paymentpartlist1">
+  <result name="success" type="tiles">paymentpartlist1</result>
+</action>
+
+<action name="contracreation"
+  class="com.action.account.Login" method="contracreation">
+  <result name="success" type="tiles">contralist</result>
+</action>
+
+<action name="contraupdate"
+  class="com.action.account.Login" method="contraupdate">
+  <result name="success" type="tiles">contralist</result>
+</action>
+
+<action name="contradelete"
+  class="com.action.account.Login" method="contradelete">
+  <result name="success" type="tiles">contralist</result>
+</action>
+
+
+<action name="receiptlist"
+  class="com.action.account.Login" method="receiptlist">
+  <result name="success" type="tiles">receiptlist</result>
+</action>
+
+ <action name="receiptcreation"
+  class="com.action.account.Login" method="receiptcreation">
+  <result name="success" type="tiles">receiptlist</result>
+</action>
+
+<action name="receiptupdate"
+  class="com.action.account.Login" method="receiptupdate">
+  <result name="success" type="tiles">receiptlist</result>
+</action>
+
+<action name="receiptdelete"
+  class="com.action.account.Login" method="receiptdelete">
+  <result name="success" type="tiles">receiptlist</result>
+</action>
+
+
+<action name="contralist"
+  class="com.action.account.Login" method="contralist">
+  <result name="success" type="tiles">contralist</result>
+</action>
+
+<action name="paymentpartlist"
+  class="com.action.account.Login" method="paymentpartlist">
+  <result name="success" type="tiles">paymentpartlist</result>
+</action>
+
+
+<action name="ledgerlist"
+  class="com.action.account.Login" method="ledgerlist">
+  <result name="success" type="tiles">ledgerlist</result>
+</action>
+ 
+ <action name="ledgercreation"
+  class="com.action.account.Login" method="ledgercreation">
+  <result name="success" type="tiles">ledgerlist</result>
+</action>
+
+<action name="ledgerupdate"
+  class="com.action.account.Login" method="ledgerupdate">
+  <result name="success" type="tiles">ledgerlist</result>
+</action>
+
+<action name="ledgerdelete"
+  class="com.action.account.Login" method="ledgerdelete">
+  <result name="success" type="tiles">ledgerlist</result>
+</action>
+
+
+
+ <action name="grpnamelist"
+  class="com.action.account.Login" method="grpnamelist">
+  <result name="success" type="tiles">grpnamelist</result>
+</action>
+<action name="grpnamelist1"
+  class="com.action.account.Login" method="grpnamelist1">
+  <result name="success" type="tiles">grpnamelist1</result>
+</action>
+<action name="grpnamelistdisp"
+  class="com.action.account.Login" method="grpnamelistdisp">
+  <result name="success" type="tiles">grpnamelist</result>
+</action>
+ <action name="grpnamecreation"
+  class="com.action.account.Login" method="grpnamecreation">
+  <result name="success" type="tiles">grpnamelist</result>
+ </action>
+ 
+ <action name="grpnameupdate"
+  class="com.action.account.Login" method="grpnameupdate">
+  <result name="success" type="tiles">grpnamelist</result>
+ </action>
+ 
+ <action name="grpnamedelete"
+  class="com.action.account.Login" method="grpnamedelete">
+  <result name="success" type="tiles">grpnamelist</result>
+ </action>
+ 
+ 
+ <action name="journallist"
+  class="com.action.account.Login" method="journallist">
+  <result name="success" type="tiles">journallist</result>
+</action>
+
+ <action name="journalcreation"
+  class="com.action.account.Login" method="journalcreation">
+  <result name="success" type="tiles">journallist</result>
+</action>
+
+<action name="journalupdate"
+  class="com.action.account.Login" method="journalupdate">
+  <result name="success" type="tiles">journallist</result>
+</action>
+
+<action name="journaldelete"
+  class="com.action.account.Login" method="journaldelete">
+  <result name="success" type="tiles">journallist</result>
+</action>
+
+
+<action name="debitnotelist"
+  class="com.action.account.Login" method="debitnotelist">
+  <result name="success" type="tiles">debitnotelist</result>
+</action>
+
+ <action name="debitnotecreation"
+  class="com.action.account.Login" method="debitnotecreation">
+  <result name="success" type="tiles">debitnotelist</result>
+</action>
+
+<action name="debitnoteupdate"
+  class="com.action.account.Login" method="debitnoteupdate">
+  <result name="success" type="tiles">debitnotelist</result>
+</action>
+
+<action name="debitnotedelete"
+  class="com.action.account.Login" method="debitnotedelete">
+  <result name="success" type="tiles">debitnotelist</result>
+</action>
+
+
+<action name="creditnotelist"
+  class="com.action.account.Login" method="creditnotelist">
+  <result name="success" type="tiles">creditnotelist</result>
+</action>
+
+ <action name="creditnotecreation"
+  class="com.action.account.Login" method="creditnotecreation">
+  <result name="success" type="tiles">creditnotelist</result>
+</action>
+
+<action name="creditnoteupdate"
+  class="com.action.account.Login" method="creditnoteupdate">
+  <result name="success" type="tiles">creditnotelist</result>
+</action>
+
+<action name="creditnotedelete"
+  class="com.action.account.Login" method="creditnotedelete">
+  <result name="success" type="tiles">creditnotelist</result>
+</action>
+
+
+<action name="saleslist"
+  class="com.action.account.Login" method="saleslist">
+  <result name="success" type="tiles">saleslist</result>
+</action>
+
+<action name="cashsaleslist"
+  class="com.action.account.Login" method="cashsaleslist">
+  <result name="success" type="tiles">cashsaleslist</result>
+</action>
+
+ <action name="salescreation"
+  class="com.action.account.Login" method="salescreation">
+  <result name="success" type="tiles">saleslist</result>
+</action>
+
+ <action name="cashsalescreation"
+  class="com.action.account.Login" method="cashsalescreation">
+  <result name="success" type="tiles">cashsaleslist</result>
+</action>
+
+<action name="salesupdate"
+  class="com.action.account.Login" method="salesupdate">
+  <result name="success" type="tiles">saleslist</result>
+</action>
+
+<action name="cashsalesupdate"
+  class="com.action.account.Login" method="cashsalesupdate">
+  <result name="success" type="tiles">cashsaleslist</result>
+</action>
+
+<action name="salesdelete"
+  class="com.action.account.Login" method="salesdelete">
+  <result name="success" type="tiles">saleslist</result>
+</action>
+
+<action name="cashsalesdelete"
+  class="com.action.account.Login" method="cashsalesdelete">
+  <result name="success" type="tiles">cashsaleslist</result>
+</action>
+
+<action name="purchaselist"
+  class="com.action.account.Login" method="purchaselist">
+  <result name="success" type="tiles">purchaselist</result>
+</action>
+
+<action name="cashpurchaselist"
+  class="com.action.account.Login" method="cashpurchaselist">
+  <result name="success" type="tiles">cashpurchaselist</result>
+</action>
+
+ <action name="purchasecreation"
+  class="com.action.account.Login" method="purchasecreation">
+  <result name="success" type="tiles">purchaselist</result>
+</action>
+
+<action name="cashpurchasecreation1"
+  class="com.action.account.Login" method="cashpurchasecreation1">
+  <result name="success" type="tiles">cashpurchaselist</result>
+</action>
+
+<action name="purchaseupdate"
+  class="com.action.account.Login" method="purchaseupdate">
+  <result name="success" type="tiles">purchaselist</result>
+</action>
+
+<action name="cashpurchaseupdate"
+  class="com.action.account.Login" method="cashpurchaseupdate">
+  <result name="success" type="tiles">cashpurchaselist</result>
+</action>
+
+<action name="purchasedelete"
+  class="com.action.account.Login" method="purchasedelete">
+  <result name="success" type="tiles">purchaselist</result>
+</action>
+
+<action name="cashpurchasedelete"
+  class="com.action.account.Login" method="cashpurchasedelete">
+  <result name="success" type="tiles">cashpurchaselist</result>
+</action>
+
+<action name="triallist"
+  class="com.action.account.Login" method="triallist">
+  <result name="success" type="tiles">triallist</result>
+</action>
+
+<action name="trialsearch"
+  class="com.action.account.Login" method="trialsearch">
+  <result name="success" type="tiles">triallist</result>
+</action>
+
+<action name="ledgerreport"
+  class="com.action.account.Login" method="ledgerreport">
+  <result name="success" type="tiles">ledgerreport</result>
+</action>
+
+<action name="monthwisereport"
+  class="com.action.account.Login" method="monthwisereport">
+  <result name="success" type="tiles">monthwisereport</result>
+</action>
+
+<action name="reportedit"
+  class="com.action.account.Login" method="reportedit">
+  <result name="success" type="tiles">reportedit</result>
+</action>
+
+<action name="reporteditsave"
+  class="com.action.account.Login" method="reporteditsave">
+  <result name="success" type="tiles">reporteditsave</result>
+</action>
+
+<action name="reportlist"
+  class="com.action.account.Login" method="reportlist">
+  <result name="success" type="tiles">reportlist</result>
+</action>
+
+<action name="datewisereport"
+  class="com.action.account.Login" method="datewisereport">
+  <result name="success" type="tiles">datewisereport</result>
+</action>
+
+<action name="cashlist"
+  class="com.action.account.Login" method="cashlist">
+  <result name="success" type="tiles">cashlist</result>
+</action>
+<action name="cashlistdetails"
+  class="com.action.account.Login" method="cashlistdetails">
+  <result name="success" type="tiles">cashlist</result>
+</action>
+
+<action name="partyledgerlist"
+  class="com.action.account.Login" method="partyledgerlist">
+  <result name="success" type="tiles">partyledgerlist</result>
+</action>
+
+<action name="partyledgerlistdetails"
+  class="com.action.account.Login" method="partyledgerlistdetails">
+  <result name="success" type="tiles">partyledgerlist</result>
+</action>
+
+<action name="openingtriallist"
+  class="com.action.account.Login" method="openingtriallist">
+  <result name="success" type="tiles">openingtriallist</result>
+</action>
+
+<action name="monthreport"
+  class="com.action.account.Login" method="monthreport">
+  <result name="success" type="tiles">monthreport</result>
+</action>
+<action name="cashbooklist"
+  class="com.action.account.Login" method="cashbooklist">
+  <result name="success" type="tiles">cashbooklist</result>
+</action>
+<action name="cashbooklist1"
+  class="com.action.account.Login" method="cashbooklist1">
+  <result name="success" type="tiles">cashbooklist</result>
+</action>
+
+<action name="cashtriallist"
+  class="com.action.account.Login" method="cashtriallist">
+  <result name="success" type="tiles">cashtriallist</result>
+</action>
+<action name="cashtriallistdetails"
+  class="com.action.account.Login" method="cashtriallistdetails">
+  <result name="success" type="tiles">cashtriallist</result>
+</action>
+
+<action name="test"
+  class="com.action.account.Login" method="test">
+  <result name="success" type="tiles">test</result>
+</action>
+
+<action name="statementlist"
+  class="com.action.account.Login" method="statementlist">
+  <result name="success" type="tiles">statementlist</result>
+</action>
+<action name="statementlistdetails"
+  class="com.action.account.Login" method="statementlistdetails">
+  <result name="success" type="tiles">statementlist</result>
+</action>
+<action name="statementedit"
+  class="com.action.account.Login" method="statementedit">
+  <result name="success" type="tiles">statementedit</result>
+</action>
+<action name="statementeditsave"
+  class="com.action.account.Login" method="statementeditsave">
+  <result name="success" type="tiles">statementeditsave</result>
+</action>
+
+
+<action name="bankbooklist"
+  class="com.action.account.Login" method="bankbooklist">
+  <result name="success" type="tiles">bankbooklist</result>
+</action>
+
+<action name="banklist"
+  class="com.action.account.Login" method="banklist">
+  <result name="success" type="tiles">bankbooklist</result>
+</action>
+
+<action name="maintainlist"
+  class="com.action.account.Login" method="maintainlist">
+  <result name="success" type="tiles">maintainlist</result>
+</action>
+<action name="maintainlistdetails"
+  class="com.action.account.Login" method="maintainlistdetails">
+  <result name="success" type="tiles">maintainlist</result>
+</action>
+
+<action name="bankreconsiliation"
+  class="com.action.account.Login" method="bankreconsiliation">
+  <result name="success" type="tiles">bankreconsiliation</result>
+</action>
+<action name="bankreconciliationsearch"
+  class="com.action.account.Login" method="bankreconciliationsearch">
+  <result name="success" type="tiles">bankreconsiliation</result>
+</action>
+
+<action name="bankreconciliationreport"
+  class="com.action.account.Login" method="bankreconciliationreport">
+  <result name="success" type="tiles">bankreconciliationreport</result>
+</action>
+<action name="bankreconsearch"
+  class="com.action.account.Login" method="bankreconsearch">
+  <result name="success" type="tiles">bankreconciliationreport</result>
+</action>
+
+
+<action name="grouptriallist"
+  class="com.action.account.Login" method="grouptriallist">
+  <result name="success" type="tiles">grouptriallist</result>
+</action>
+<action name="grouptrialsearch"
+  class="com.action.account.Login" method="grouptrialsearch">
+  <result name="success" type="tiles">grouptriallist</result>
+</action>
+
+<action name="subgrouptriallist"
+	class="com.action.account.Login" method="subgrouptriallist">
+	<result name="success" type="tiles">subgrouptriallist</result>
+</action>
+
+<action name="subgrouptrialsearch"
+  class="com.action.account.Login" method="subgrouptrialsearch">
+  <result name="success" type="tiles">subgrouptriallist</result>
+</action>
+
+<action name="billoutstandinglist"
+  class="com.action.account.Login" method="billoutstandinglist">
+  <result name="success" type="tiles">billoutstandinglist</result>
+</action>
+<action name="billoutstandinglistdetails"
+  class="com.action.account.Login" method="billoutstandinglistdetails">
+  <result name="success" type="tiles">billoutstandinglist</result>
+</action>
+
+<action name="logout" class="com.action.account.Login" method="logout">  
+<result name="success" >login.jsp</result>  
+</action>
+
+<action name="ledgerlist1"
+  class="com.action.account.Login" method="ledgerlist1">
+  <result name="success" type="tiles">ledgerlist1</result>
+</action>
+
+<action name="daybooklist"
+  class="com.action.account.Login" method="daybooklist">
+  <result name="success" type="tiles">daybooklist</result>
+</action>
+<action name="daybooklistdetails"
+  class="com.action.account.Login" method="daybooklistdetails">
+  <result name="success" type="tiles">daybooklist</result>
+</action>
+
+<action name="journalregisterlist"
+  class="com.action.account.Login" method="journalregisterlist">
+  <result name="success" type="tiles">journalregisterlist</result>
+</action>
+<action name="journalregisterlistdetails"
+  class="com.action.account.Login" method="journalregisterlistdetails">
+  <result name="success" type="tiles">journalregisterlist</result>
+</action>
+<action name="journalregisterlistdetails1"
+  class="com.action.account.Login" method="journalregisterlistdetails1">
+  <result name="success" type="tiles">journalregisterlist1</result>
+</action>
+<action name="journalreport"
+  class="com.action.account.Login" method="journalreport">
+  <result name="success" type="tiles">journalreport</result>
+</action>
+
+<action name="salesmanlist"
+  class="com.action.inventory.Login" method="salesmanlist">
+  <result name="success" type="tiles">salesmanlist</result>
+</action>
+<action name="salesmancreation"
+  class="com.action.inventory.Login" method="salesmancreation">
+  <result name="success" type="tiles">salesmanlist</result>
+</action>
+<action name="salesmanupdate"
+  class="com.action.inventory.Login" method="salesmanupdate">
+  <result name="success" type="tiles">salesmanlist</result>
+</action>
+<action name="salesmandelete"
+  class="com.action.inventory.Login" method="salesmandelete">
+  <result name="success" type="tiles">salesmanlist</result>
+</action>
+
+<action name="materialgrouplist"
+  class="com.action.inventory.Login" method="materialgrouplist">
+  <result name="success" type="tiles">materialgrouplist</result>
+</action>
+<action name="materialgroupcreation"
+  class="com.action.inventory.Login" method="materialgroupcreation">
+  <result name="success" type="tiles">materialgrouplist</result>
+</action>
+<action name="materialgroupupdate"
+  class="com.action.inventory.Login" method="materialgroupupdate">
+  <result name="success" type="tiles">materialgrouplist</result>
+</action>
+<action name="materialgroupdelete"
+  class="com.action.inventory.Login" method="materialgroupdelete">
+  <result name="success" type="tiles">materialgrouplist</result>
+</action>
+
+<action name="mrlist"
+  class="com.action.inventory.Login" method="mrlist">
+  <result name="success" type="tiles">mrlist</result>
+</action>
+<action name="mrcreation"
+  class="com.action.inventory.Login" method="mrcreation">
+  <result name="success" type="tiles">mrlist</result>
+</action>
+<action name="mrupdate"
+  class="com.action.inventory.Login" method="mrupdate">
+  <result name="success" type="tiles">mrlist</result>
+</action>
+<action name="mrdelete"
+  class="com.action.inventory.Login" method="mrdelete">
+  <result name="success" type="tiles">mrlist</result>
+</action>
+
+<action name="categorylist"
+  class="com.action.inventory.Login" method="categorylist">
+  <result name="success" type="tiles">categorylist</result>
+</action>
+<action name="categorycreation"
+  class="com.action.inventory.Login" method="categorycreation">
+  <result name="success" type="tiles">categorylist</result>
+</action>
+<action name="categoryupdate"
+  class="com.action.inventory.Login" method="categoryupdate">
+  <result name="success" type="tiles">categorylist</result>
+</action>
+<action name="categorydelete"
+  class="com.action.inventory.Login" method="categorydelete">
+  <result name="success" type="tiles">categorylist</result>
+</action>
+
+<action name="materialist"
+  class="com.action.inventory.Login" method="materialist">
+  <result name="success" type="tiles">materialist</result>
+</action>
+<action name="materialcreation"
+  class="com.action.inventory.Login" method="materialcreation">
+  <result name="success" type="tiles">materialist</result>
+</action>
+<action name="materialupdate"
+  class="com.action.inventory.Login" method="materialupdate">
+  <result name="success" type="tiles">materialist</result>
+</action>
+<action name="materialdelete"
+  class="com.action.inventory.Login" method="materialdelete">
+  <result name="success" type="tiles">materialist</result>
+</action>
+
+<action name="placemasterlist"
+  class="com.action.inventory.Login" method="placemasterlist">
+  <result name="success" type="tiles">placemasterlist</result>
+</action>
+<action name="placecreation"
+  class="com.action.inventory.Login" method="placecreation">
+  <result name="success" type="tiles">placemasterlist</result>
+</action>
+<action name="placeupdate"
+  class="com.action.inventory.Login" method="placeupdate">
+  <result name="success" type="tiles">placemasterlist</result>
+</action>
+<action name="placedelete"
+  class="com.action.inventory.Login" method="placedelete">
+  <result name="success" type="tiles">placemasterlist</result>
+</action>
+
+<action name="headquarterlist"
+  class="com.action.inventory.Login" method="headquarterlist">
+  <result name="success" type="tiles">headquarterlist</result>
+</action>
+<action name="headquartercreation"
+  class="com.action.inventory.Login" method="headquartercreation">
+  <result name="success" type="tiles">headquarterlist</result>
+</action>
+<action name="headquarterupdate"
+  class="com.action.inventory.Login" method="headquarterupdate">
+  <result name="success" type="tiles">headquarterlist</result>
+</action>
+<action name="headquarterdelete"
+  class="com.action.inventory.Login" method="headquarterdelete">
+  <result name="success" type="tiles">headquarterlist</result>
+</action>
+
+<action name="purchaseentrylist"
+  class="com.action.inventory.Login" method="purchaseentrylist">
+  <result name="success" type="tiles">purchaseentrylist</result>
+</action>
+<action name="purchaseentrycreation"
+  class="com.action.inventory.Login" method="purchaseentrycreation">
+  <result name="success" type="tiles">purchaseentrylist</result>
+</action>
+<action name="purchaseentrydelete"
+  class="com.action.inventory.Login" method="purchaseentrydelete">
+  <result name="success" type="tiles">purchaseentrylist</result>
+</action>
+<action name="purchaseentryupdate"
+  class="com.action.inventory.Login" method="purchaseentryupdate">
+  <result name="success" type="tiles">purchaseentrylist</result>
+</action>
+
+<action name="outwardlist"
+  class="com.action.inventory.Login" method="outwardlist">
+  <result name="success" type="tiles">outwardlist</result>
+</action>
+
+<action name="salesinvoicelist"
+  class="com.action.inventory.Login" method="salesinvoicelist">
+  <result name="success" type="tiles">salesinvoicelist</result>
+</action>
+
+<action name="tradingsalesinvoicelist"
+  class="com.action.inventory.Login" method="tradingsalesinvoicelist">
+  <result name="success" type="tiles">tradingsalesinvoicelist</result>
+</action>
+<action name="tradingsalescreation"
+  class="com.action.inventory.Login" method="tradingsalescreation">
+  <result name="success" type="tiles">tradingsalesinvoicelist</result>
+</action>
+
+<action name="incentiveschemelist"
+  class="com.action.inventory.Login" method="incentiveschemelist">
+  <result name="success" type="tiles">incentiveschemelist</result>
+</action>
+<action name="incentiveschemecreation"
+  class="com.action.inventory.Login" method="incentiveschemecreation">
+  <result name="success" type="tiles">incentiveschemelist</result>
+</action>
+
+
+
+
+<action name="partylist"
+  class="com.action.inventory.Login" method="partylist">
+  <result name="success" type="tiles">partylist</result>
+</action>
+<action name="companylist"
+  class="com.action.inventory.Login" method="companylist">
+  <result name="success" type="tiles">companylist</result>
+</action>
+
+<action name="claimlist"
+  class="com.action.inventory.Login" method="claimlist">
+  <result name="success" type="tiles">claimlist</result>
+</action>
+
+<action name="partymastercreation"
+  class="com.action.inventory.Login" method="partymastercreation">
+  <result name="success" type="tiles">partydetaillist</result>
+</action>
+
+<action name="companymastercreation"
+  class="com.action.inventory.Login" method="companymastercreation">
+  <result name="success" type="tiles">compdetaillist</result>
+</action>
+
+
+<action name="claimmaster1"
+  class="com.action.inventory.Login" method="claimmaster1">
+  <result name="success" type="tiles">claimlist</result>
+</action>
+
+<action name="claimdelete"
+  class="com.action.inventory.Login" method="claimdelete">
+  <result name="success" type="tiles">claimlist</result>
+</action>
+
+<action name="companydelete"
+  class="com.action.inventory.Login" method="companydelete">
+  <result name="success" type="tiles">compdetaillist</result>
+</action>
+
+
+<action name="partydelete"
+  class="com.action.inventory.Login" method="partydelete">
+  <result name="success" type="tiles">partydetaillist</result>
+</action>
+
+<action name="partyupdate"
+  class="com.action.inventory.Login" method="partyupdate">
+  <result name="success" type="tiles">partylist</result>
+</action>
+
+
+<action name="companyupdate"
+  class="com.action.inventory.Login" method="companyupdate">
+  <result name="success" type="tiles">companylist</result>
+</action>
+
+
+
+<action name="partydetaillist"
+  class="com.action.inventory.Login" method="partydetaillist">
+  <result name="success" type="tiles">partydetaillist</result>
+</action>
+
+
+
+<action name="claimupdate"
+  class="com.action.inventory.Login" method="claimupdate">
+  <result name="success" type="tiles">claimlist</result>
+</action>
+
+
+
+
+<action name="compdetaillist"
+  class="com.action.inventory.Login" method="compdetaillist">
+  <result name="success" type="tiles">compdetaillist</result>
+</action>
+<action name="materialglist"
+  class="com.action.inventory.Login" method="materialglist">
+  <result name="success" type="tiles">materialglist</result>
+</action>
+<action name="materialgroupcreation1"
+  class="com.action.inventory.Login" method="materialgroupcreation1">
+  <result name="success" type="tiles">materialglist</result>
+</action>
+<action name="materialupdate1"
+  class="com.action.inventory.Login" method="materialupdate1">
+  <result name="success" type="tiles">materialglist</result>
+</action>
+
+<action name="materialdelete1"
+  class="com.action.inventory.Login" method="materialdelete1">
+  <result name="success" type="tiles">materialglist</result>
+</action>
+<action name="materialpaddarlist"
+  class="com.action.inventory.Login" method="materialpaddarlist">
+  <result name="success" type="tiles">materialpaddarlist</result>
+</action>
+<action name="paddarlistcreation1"
+  class="com.action.inventory.Login" method="paddarlistcreation1">
+  <result name="success" type="tiles">materialpaddarlist</result>
+</action>
+
+<action name="paddarlistupdate1"
+  class="com.action.inventory.Login" method="paddarlistupdate1">
+  <result name="success" type="tiles">materialpaddarlist</result>
+</action>
+<action name="paddarlistdelete1"
+  class="com.action.inventory.Login" method="paddarlistdelete1">
+  <result name="success" type="tiles">materialpaddarlist</result>
+</action>
+
+
+<action name="salesmemeoentry"
+  class="com.action.inventory.Login" method="salesmemeoentry">
+  <result name="success" type="tiles">salesmemeoentry</result>
+</action>
+<action name="salesmemeocreation"
+  class="com.action.inventory.Login" method="salesmemeocreation">
+  <result name="success" type="tiles">salesmemeoentry</result>
+</action>
+<action name="salesmemeoupdate"
+  class="com.action.inventory.Login" method="salesmemeoupdate">
+  <result name="success" type="tiles">salesmemeoentry</result>
+</action>
+<action name="salesmemeodelete"
+  class="com.action.inventory.Login" method="salesmemeodelete">
+  <result name="success" type="tiles">salesmemeoentry</result>
+</action>
+
+<action name="salesreturn"
+  class="com.action.inventory.Login" method="salesreturn">
+  <result name="success" type="tiles">salesreturn</result>
+</action>
+
+<action name="salesreturncreation"
+  class="com.action.inventory.Login" method="salesreturncreation">
+  <result name="success" type="tiles">salesreturn</result>
+</action>
+<action name="salesreturnupdate"
+  class="com.action.inventory.Login" method="salesreturnupdate">
+  <result name="success" type="tiles">salesreturn</result>
+</action>
+<action name="salesreturndelete"
+  class="com.action.inventory.Login" method="salesreturndelete">
+  <result name="success" type="tiles">salesreturn</result>
+</action>
+
+
+<action name="msalesmemeoentry"
+  class="com.action.inventory.Login" method="msalesmemeoentry">
+  <result name="success" type="tiles">msalesmemeoentry</result>
+</action>
+<action name="msalesmemeocreation"
+  class="com.action.inventory.Login" method="msalesmemeocreation">
+  <result name="success" type="tiles">msalesmemeoentry</result>
+</action>
+<action name="msalesmemeoupdate"
+  class="com.action.inventory.Login" method="msalesmemeoupdate">
+  <result name="success" type="tiles">msalesmemeoentry</result>
+</action>
+<action name="msalesmemeodelete"
+  class="com.action.inventory.Login" method="msalesmemeodelete">
+  <result name="success" type="tiles">msalesmemeoentry</result>
+</action>
+
+<action name="csalesmemeoentry"
+  class="com.action.inventory.Login" method="csalesmemeoentry">
+  <result name="success" type="tiles">csalesmemeoentry</result>
+</action>
+<action name="csalesmemeocreation"
+  class="com.action.inventory.Login" method="csalesmemeocreation">
+  <result name="success" type="tiles">csalesmemeoentry</result>
+</action>
+<action name="csalesmemeoupdate"
+  class="com.action.inventory.Login" method="csalesmemeoupdate">
+  <result name="success" type="tiles">csalesmemeoentry</result>
+</action>
+<action name="csalesmemeodelete"
+  class="com.action.inventory.Login" method="csalesmemeodelete">
+  <result name="success" type="tiles">csalesmemeoentry</result>
+</action>
+
+
+<action name="dsalesmemeoentry"
+  class="com.action.inventory.Login" method="dsalesmemeoentry">
+  <result name="success" type="tiles">dsalesmemeoentry</result>
+</action>
+
+<action name="dsalesmemeocreation"
+  class="com.action.inventory.Login" method="dsalesmemeocreation">
+  <result name="success" type="tiles">dsalesmemeoentry</result>
+</action>
+<action name="dsalesmemeoupdate"
+  class="com.action.inventory.Login" method="dsalesmemeoupdate">
+  <result name="success" type="tiles">dsalesmemeoentry</result>
+</action>
+<action name="dsalesmemeodelete"
+  class="com.action.inventory.Login" method="dsalesmemeodelete">
+  <result name="success" type="tiles">dsalesmemeoentry</result>
+</action>
+
+<!-- <action name="purchaselist"
+  class="com.action.inventory.Login" method="purchaselist">
+  <result name="success" type="tiles">purchaselist</result>
+</action> -->
+<action name="purchasecreation"
+  class="com.action.inventory.Login" method="purchasecreation">
+  <result name="success" type="tiles">purchaselist1</result>
+</action>
+<action name="purchaselist1"
+  class="com.action.inventory.Login" method="purchaselist1">
+  <result name="success" type="tiles">purchaselist1</result>
+</action>
+
+<action name="purchaseupdate1"
+  class="com.action.inventory.Login" method="purchaseupdate1">
+  <result name="success" type="tiles">purchaselist1</result>
+</action>
+<action name="purchasedelete1"
+  class="com.action.inventory.Login" method="purchasedelete1">
+  <result name="success" type="tiles">purchaselist1</result>
+</action>
+</package>
+</struts>

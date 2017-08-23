@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!--<definition name="login-success" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to Wireless" />
+		<put-attribute name="body" value="/Body/Dashboard/dasboard.jsp" />
+	</definition>-->
+		
+	<definition name="login-success" template="/Layout/layout1.jsp">
+		<put-attribute name="title" value="Waiting...." />
+		<put-attribute name="body" value="/loader1.jsp" />
+	</definition>
+		
+		<definition name="dashboard" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Dashboard" />
+		<put-attribute name="body" value="/Body/Dashboard/dashboard.jsp" />
+	</definition>
+	
+	<definition name="loader1" template="/Layout/layout1.jsp">
+		<put-attribute name="title" value="Select Company And Year" />
+		<put-attribute name="body" value="/loader1.jsp" />
+	</definition>
+	
+	<definition name="userlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/user/usercreation.jsp" />
+	</definition>
+		
+	<definition name="calculator" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/calculator/calculator.jsp" />
+	</definition>
+	
+	<definition name="acgroupcreation" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_master/acgroup_master.jsp" />
+	</definition>
+	
+	<definition name="ledgerlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="ACCOUNTS | Ledger" />
+		<put-attribute name="body" value="/Body/account_master/ledger_ac_creation.jsp" />
+	</definition>
+	<definition name="ledgerlist1" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="ACCOUNTS | Ledger" />
+		<put-attribute name="body" value="/Body/account_master/ledger_ac_creation.jsp" />
+	</definition>
+	
+	<definition name="ledgersublist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_master/ledger_ac_creation.jsp" />
+	</definition>
+	
+	<definition name="grpnamelistdisp" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_master/subgroup.jsp" />
+	</definition>
+	
+	<definition name="narrationlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="ACCOUNTS | Narration Master" />
+		<put-attribute name="body" value="/Body/account_master/narrationmaster.jsp" />
+	</definition>	
+	
+	<definition name="triallist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Ledger Trial List" />
+		<put-attribute name="body" value="/Body/account_report/trialbalance.jsp" />
+	</definition>
+	
+	<definition name="paymentlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Payment" />
+		<put-attribute name="body" value="/Body/account_transaction/payment.jsp" />
+	</definition>
+	
+	
+	<definition name="paymentpartlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/master/payment.jsp" />
+	</definition>
+	
+	<definition name="paymentpartlist1" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/master/payment.jsp" />
+	</definition>
+	
+	<definition name="paymentpartlist2" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/master/debitnote.jsp" />
+	</definition>
+	
+	<definition name="paymentpartlist3" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/master/purchase.jsp" />
+	</definition>
+	
+	<definition name="paymentpartlist4" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/master/sales.jsp" />
+	</definition>
+	
+	<definition name="receiptlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Receipt" />
+		<put-attribute name="body" value="/Body/account_transaction/receipt.jsp" />
+	</definition>
+	
+	<definition name="contralist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Contra" />
+		<put-attribute name="body" value="/Body/account_transaction/contra.jsp" />
+	</definition>
+	
+	<definition name="journallist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Journal" />
+		<put-attribute name="body" value="/Body/account_transaction/journal.jsp" />
+	</definition>
+	
+	<definition name="purchaselist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Credit Purchase" />
+		<put-attribute name="body" value="/Body/account_transaction/purchase.jsp" />
+	</definition>
+	
+	<definition name="cashpurchaselist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Cash Purchase" />
+		<put-attribute name="body" value="/Body/account_transaction/cashpurchase.jsp" />
+	</definition>
+	
+	<definition name="debitnotelist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Debit Note" />
+		<put-attribute name="body" value="/Body/account_transaction/debitnote.jsp" />
+	</definition>
+	
+	<definition name="creditnotelist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Credit Note" />
+		<put-attribute name="body" value="/Body/account_transaction/creditnote.jsp" />
+	</definition>
+	
+	<definition name="saleslist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Credit Sales" />
+		<put-attribute name="body" value="/Body/account_transaction/sales.jsp" />
+	</definition>
+	
+	<definition name="cashsaleslist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Cash Sales" />
+		<put-attribute name="body" value="/Body/account_transaction/cashsales.jsp" />
+	</definition>
+	
+	<definition name="purchase" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/master/purchase.jsp" />
+	</definition>
+	
+	
+	<definition name="acgrouplist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="ACCOUNTS | Master Group" />
+		<put-attribute name="body" value="/Body/account_master/acgroup_master.jsp" />
+	</definition>
+	<definition name="acgrouplist1" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_master/acgroup_master.jsp" />
+	</definition>
+	
+	<definition name="grpnamecreation" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_master/subgroup.jsp" />
+	</definition>
+	
+	<definition name="grpnamelist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="ACCOUNTS | Subgroup" />
+		<put-attribute name="body" value="/Body/account_master/subgroup.jsp" />
+	</definition>
+	<definition name="grpnamelist1" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_master/subgroup.jsp" />
+	</definition>
+	
+	<definition name="ledgerreport" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/ledgerreport.jsp" />
+	</definition>
+	
+	<definition name="monthwisereport" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/monthwisereport.jsp" />
+	</definition>
+	
+	<definition name="reportedit" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/reportedit.jsp" />
+	</definition>
+	
+	<definition name="reportlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/transaction/reportedit.jsp" />
+	</definition>
+	
+	<definition name="datewisereport" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/datewisereport.jsp" />
+	</definition>
+	
+	<definition name="cashlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Daily Cash Balance" />
+		<put-attribute name="body" value="/Body/account_report/cashlist.jsp" />
+	</definition>
+	
+	<definition name="partyledgerlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Breakup of Party Ledger" />
+		<put-attribute name="body" value="/Body/account_report/partyledgerlist.jsp" />
+	</definition>
+	
+	<definition name="reporteditsave" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/monthwisereport.jsp" />
+	</definition>
+
+	<definition name="openingtriallist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Opening Trial List" />
+		<put-attribute name="body" value="/Body/account_report/openingtriallist.jsp" />
+	</definition>
+	
+	<definition name="monthreport" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/monthreport.jsp" />
+	</definition>
+	<definition name="cashbooklist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Cash Book" />
+		<put-attribute name="body" value="/Body/account_report/cashbooklist.jsp" />
+	</definition>
+	
+	<definition name="cashtriallist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Cash Trial" />
+		<put-attribute name="body" value="/Body/account_report/cashtriallist.jsp" />
+	</definition>
+	
+	<definition name="test" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/master/ledger_ac_creation.jsp" />
+	</definition>
+	
+	<definition name="statementlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Account Statement" />
+		<put-attribute name="body" value="/Body/account_report/statementlist.jsp" />
+	</definition>
+	
+	<definition name="statementedit" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/statementedit.jsp" />
+	</definition>
+	
+	<definition name="statementeditsave" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/statementlist.jsp" />
+	</definition>
+	
+	<definition name="bankbooklist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Bank Book" />
+		<put-attribute name="body" value="/Body/account_report/bankbooklist.jsp" />
+	</definition>
+	
+	<definition name="maintainlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Maintain Voucher" />
+		<put-attribute name="body" value="/Body/account_report/maintainlist.jsp" />
+	</definition>
+	
+	<definition name="bankreconsiliation" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Transaction Reconsiliation" />
+		<put-attribute name="body" value="/Body/account_transaction/bankreconciliation.jsp" />
+	</definition>
+	
+	<definition name="bankreconciliationreport" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Bank Reconsiliation Report" />
+		<put-attribute name="body" value="/Body/account_report/bankreconciliationreport.jsp" />
+	</definition>
+	
+	<definition name="grouptriallist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Group Trial List" />
+		<put-attribute name="body" value="/Body/account_report/grouptriallist.jsp" />
+	</definition>
+	
+	<definition name="subgrouptriallist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="SubGroup Trial List" />
+		<put-attribute name="body" value="/Body/account_report/subgrouptrialbalance.jsp" />
+	</definition>
+	
+	<definition name="billoutstandinglist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Outstanding Bill" />
+		<put-attribute name="body" value="/Body/account_report/billoutstandinglist.jsp" />
+	</definition>
+	<definition name="daybooklist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Day Book" />
+		<put-attribute name="body" value="/Body/account_report/daybooklist.jsp" />
+	</definition>
+	
+	<definition name="journalregisterlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Journal Register" />
+		<put-attribute name="body" value="/Body/account_report/journalregisterlist.jsp" />
+	</definition>
+	<definition name="journalregisterlist1" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Journal Register" />
+		<put-attribute name="body" value="/Body/account_report/journalregisterlist.jsp" />
+	</definition>
+	<definition name="journalreport" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to ACCOUNTS" />
+		<put-attribute name="body" value="/Body/account_report/journalreport.jsp" />
+	</definition>
+	<definition name="salesmanlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Sales-Man" />
+		<put-attribute name="body" value="/Body/inventory_master/salesman.jsp" />
+	</definition>
+	<definition name="materialgrouplist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Material Group" />
+		<put-attribute name="body" value="/Body/inventory_master/materialgrouplist.jsp" />
+	</definition>
+	<definition name="mrlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Medical Representative" />
+		<put-attribute name="body" value="/Body/inventory_master/mrlist.jsp" />
+	</definition>
+	<definition name="categorylist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Category Master" />
+		<put-attribute name="body" value="/Body/inventory_master/categorylist.jsp" />
+	</definition>
+	<definition name="materialist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Material" />
+		<put-attribute name="body" value="/Body/inventory_master/materialist.jsp" />
+	</definition>
+	<definition name="placemasterlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Place Master" />
+		<put-attribute name="body" value="/Body/inventory_master/placemasterlist.jsp" />
+	</definition>
+	<definition name="headquarterlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Material" />
+		<put-attribute name="body" value="/Body/inventory_master/headquarterlist.jsp" />
+	</definition>
+	<definition name="salesreturn" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to Sales Return Entry" />
+		<put-attribute name="body" value="/Body/inventory_transaction/salesreturn.jsp" />
+	</definition>
+	<definition name="purchaseentrylist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Purchase" />
+		<put-attribute name="body" value="/Body/inventory_transaction/purchaseentry.jsp" />
+	</definition>
+	<definition name="outwardlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Outward Challan" />
+		<put-attribute name="body" value="/Body/inventory_transaction/outward.jsp" />
+	</definition>
+	<definition name="salesinvoicelist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Sales Invoice" />
+		<put-attribute name="body" value="/Body/inventory_transaction/salesinvoice.jsp" />
+	</definition>
+	<definition name="tradingsalesinvoicelist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Trading Sales Invoice" />
+		<put-attribute name="body" value="/Body/inventory_transaction/tradingsalesinvoice.jsp" />
+	</definition>
+	
+	<definition name="incentiveschemelist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Trading Incentive Scheme" />
+		<put-attribute name="body" value="/Body/inventory_transaction/incentivescheme.jsp" />
+	</definition>
+	
+	
+	
+
+	
+	
+	<definition name="compdetaillist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Trading Incentive Scheme" />
+		<put-attribute name="body" value="/Body/inventory_master/companydetails.jsp" />
+	</definition>
+	
+	<definition name="partydetaillist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Trading Incentive Scheme" />
+		<put-attribute name="body" value="/Body/inventory_master/partydetails.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	<definition name="partylist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Trading Incentive Scheme" />
+		<put-attribute name="body" value="/Body/inventory_master/partylist.jsp" />
+	</definition>
+	
+	
+	<definition name="companylist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Trading Incentive Scheme" />
+		<put-attribute name="body" value="/Body/inventory_master/CompanyMaster.jsp" />
+	</definition>
+	
+	<definition name="claimlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Trading Incentive Scheme" />
+		<put-attribute name="body" value="/Body/inventory_master/ClaimMaster.jsp" />
+	</definition>
+	
+	
+	<definition name="materialpaddarlist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome poddar Group" />
+		<put-attribute name="body" value="/Body/inventory_master/materialpaddarlist.jsp" />
+	</definition>
+		<definition name="materialglist" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome poddar Group" />
+		<put-attribute name="body" value="/Body/inventory_master/MaterialGroup.jsp" />
+	</definition>
+		<definition name="salesmemeoentry" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to Sales Memo Entry" />
+		<put-attribute name="body" value="/Body/inventory_transaction/salesmemeoentry.jsp" />
+	</definition>
+	<definition name="msalesmemeoentry" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to MRP. Sales Memo Entry" />
+		<put-attribute name="body" value="/Body/inventory_transaction/msalesmemeoentry.jsp" />
+	</definition>
+	<definition name="csalesmemeoentry" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to Counter Sales Memo Entry" />
+		<put-attribute name="body" value="/Body/inventory_transaction/csalesmemeoentry.jsp" />
+	</definition>
+	<definition name="dsalesmemeoentry" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to Counter Sales Memo Entry" />
+		<put-attribute name="body" value="/Body/inventory_transaction/dsalesmemeoentry.jsp" />
+	</definition>
+	
+	<definition name="purchaselist1" template="/Layout/layout.jsp">
+		<put-attribute name="title" value="Welcome to Purchase Entry" />
+		<put-attribute name="body" value="/Body/inventory_transaction/purchaseentryy.jsp" />
+	</definition>
+	
+</tiles-definitions>

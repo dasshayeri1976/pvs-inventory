@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/account"  reloadable="true" crossContext="true">
+  <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource" removeAbandoned="true"
+   removeAbandonedTimeout="30" maxActive="100" maxIdle="30" maxWait="10"
+  username="root" password="" driverClassName="com.mysql.jdbc.Driver"
+  url="jdbc:mysql://localhost:3306/pvs_inventory" />
+</Context>
